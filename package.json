@@ -1,0 +1,33 @@
+{
+  "name": "ts-type-level-scheme",
+  "description": "Type-level Scheme interpreter in TypeScript",
+  "repository": "https://github.com/sititou70/ts-type-level-scheme",
+  "version": "0.0.4",
+  "author": "sititou70",
+  "main": "dist/index.ts",
+  "files": [
+    "dist",
+    "src",
+    "!src/**/*.{test}.ts",
+    "!src/examples/**/*"
+  ],
+  "scripts": {
+    "build": "tsc --build tsconfigs/build.json",
+    "test": "tsc --project tsconfigs/test.json --noEmit",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "type-level programming",
+    "scheme"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "conditional-type-checks": "1.0.6",
+    "typescript": "5.3.3"
+  },
+  "engines": {
+    "node": "20.10.0",
+    "npm": "10.2.3"
+  }
+}
